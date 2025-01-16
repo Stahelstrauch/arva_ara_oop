@@ -3,6 +3,11 @@ from random import randint
 from models.Database import Database
 from models.Stopwatch import Stopwatch
 
+"""Ülesanne:
+1. Tehke meetod no_cheater() Database klassi, mis tagastab ainult ausad mängijad.
+2. Näita edetabelis ainult ausaid mängijaid ning edetabelis näita nimi, äraarvatav number, sammude arv ja aeg (00:00:00) Ilusati :)
+3. Nimest näita ainult 15 esimest tähte kui on pikem nimi."""
+
 
 class Model:
     #Defineerime klassi muutujad
@@ -59,7 +64,7 @@ class Model:
         name = self.ask_name()
         # print(name) #testisime kas küsib nime
         db = Database() #Loo andmebaasi objekt
-        db.add_record(name, self.steps, self.pc_nr, self.cheater, self.stopwatch.seconds)
+        db.add_record(name, self.pc_nr, self.steps, self.cheater, self.stopwatch.seconds)
 
 
     @staticmethod
@@ -82,7 +87,8 @@ class Model:
                 # self.stopwatch.start() #Käivita stopper
                 self.lets_play() #Hakkad uuesti mängima
             elif user_input == 2:
-                self.show_leaderboard() #Näita edetabelit
+                #self.show_leaderboard() #Näita edetabelit
+                self.show_no_cheater()
                 self.show_menu() #Näita menüüd
             elif user_input == 3:
                 print('Bye, bye :)')
@@ -90,12 +96,42 @@ class Model:
         else:
             self.show_menu()
 
+
     @staticmethod
     def show_leaderboard():
-        """N'ita edetabelit"""
+        """Näita edetabelit"""
         db = Database()
         data = db.read_records()
         if data:
             for record in data:
-                print(record) #name oleks record[1]
+                print(record)  # name oleks record[1]
+
+    def show_no_cheater(self):
+        """Edetabel ausatele mängijatele"""
+        db = Database()
+        data = db.no_cheater()
+        if data:
+            #Vormindus funktsioon veerule
+            #formatters = {'Mängu aeg': self.format_time}
+            print() #Tühirida enne tabelit
+            #self.print_table(data, formatters)
+            self.manual_table(data)
+            print()
+
+
+    @staticmethod
+    def format_time(seconds):
+        hours = seconds // 3600
+        minutes = (seconds % 3600) // 60
+        seconds = seconds % 60
+        return f'{hours:02}:{minutes:02}:{seconds:02}'
+
+    def manual_table(self, data):
+        print('Nimi             | Number | Sammud | Mängu aeg')
+        for row in data:
+            print('----------------------------------------------')
+            print(f'{row[0][:15]:<16} | {row[1]:>6} | {row[2]:>6} | {self.format_time(row[3]):>9}')
+
+
+
 
