@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6feae4f9-71a5-4dec-976f-e8808d216b41" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/arva_ara_oop.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Database.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Stopwatch.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/__init__.py" afterDir="false" />
+    <list default="true" id="6feae4f9-71a5-4dec-976f-e8808d216b41" name="Changes" comment="Added folder models, files main, Model, Database (half) and Stopwatch.py (done)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/Model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Stopwatch.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/Stopwatch.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +25,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Stahelstrauch"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Stahelstrauch/arva_ara_oop.git",
+    "accountId": "cc97dd9e-f35a-459f-b46a-242c828e8161"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 2
 }]]></component>
@@ -105,14 +108,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737013871939</updated>
-      <workItem from="1737013873293" duration="4686000" />
+      <workItem from="1737013873293" duration="9728000" />
     </task>
+    <task id="LOCAL-00001" summary="Added folder models, files main, Model, Database (half) and Stopwatch.py (done)">
+      <option name="closed" value="true" />
+      <created>1737019702941</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1737019702941</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added folder models, files main, Model, Database (half) and Stopwatch.py (done)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added folder models, files main, Model, Database (half) and Stopwatch.py (done)" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/arva_ara_oop$main.coverage" NAME="main Coverage Results" MODIFIED="1737018538634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/arva_ara_oop$main.coverage" NAME="main Coverage Results" MODIFIED="1737023113671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
