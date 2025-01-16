@@ -6,7 +6,9 @@ from models.Stopwatch import Stopwatch
 
 if __name__ == '__main__':
     model = Model()
-    model.lets_play()
+    model.show_menu() # kui see on esimene ilma lets_playta, siis näed esimesena menüüd
+    #TODO Järgnev rida oli enne show_menu osa
+    #model.lets_play()
 
     """stopper = Stopwatch() #Objekti loomine, sellega saime kontrollida, et stopper töötab
     stopper.start()

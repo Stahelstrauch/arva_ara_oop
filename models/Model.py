@@ -1,5 +1,6 @@
 from random import randint
 
+from models.Database import Database
 from models.Stopwatch import Stopwatch
 
 
@@ -22,7 +23,7 @@ class Model:
         self.game_over = False
         self.cheater = False
         self.stopwatch.reset() # Nullib stopperi
-        self.stopwatch.start() #Käivitab stopperi
+        #self.stopwatch.start() #Käivitab stopperi
 
     def ask(self):
         """Küsib numbrit ja kontrollib"""
@@ -45,6 +46,56 @@ class Model:
 
     def lets_play(self):
         """Mängime mängu avalik meetod"""
+        self.stopwatch.start() #Paneb stopperi käima
         while not self.game_over:
             self.ask()
         print(f'Mäng kestis {self.stopwatch.format_time()}')
+        self.what_next() #Mis on järgmiseks #Nime küsimine ja kirje lisamine
+        self.show_menu() #Näita mängu menüüd
+
+
+    def what_next(self):
+        """Küsime mängija nime ja lisame info andmebaasi"""
+        name = self.ask_name()
+        # print(name) #testisime kas küsib nime
+        db = Database() #Loo andmebaasi objekt
+        db.add_record(name, self.steps, self.pc_nr, self.cheater, self.stopwatch.seconds)
+
+
+    @staticmethod
+    def ask_name():
+        """Küsib nime ja tagastab korrektse nime"""
+        name = input('Kuidas on mängija nimi? ')
+        if not name.strip():
+            name = 'Teadmata'
+        return name.strip()
+
+    def show_menu(self):
+        """Näita mängu menüüd"""
+        print('1 - Mängima')
+        print('2 - Edetabel')
+        print('3 - Välju programmist')
+        user_input = int(input('Sisesta number [1, 2 või 3]: '))
+        if 1 <= user_input <= 3:
+            if user_input == 1:
+                self.reset_game() #Kõigepealt resetid selle mängu ära
+                # self.stopwatch.start() #Käivita stopper
+                self.lets_play() #Hakkad uuesti mängima
+            elif user_input == 2:
+                self.show_leaderboard() #Näita edetabelit
+                self.show_menu() #Näita menüüd
+            elif user_input == 3:
+                print('Bye, bye :)')
+                exit() #Igasugune skripti töö lõpp
+        else:
+            self.show_menu()
+
+    @staticmethod
+    def show_leaderboard():
+        """N'ita edetabelit"""
+        db = Database()
+        data = db.read_records()
+        if data:
+            for record in data:
+                print(record) #name oleks record[1]
+
