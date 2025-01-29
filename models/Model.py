@@ -1,6 +1,7 @@
 from random import randint
 
 from models.Database import Database
+from models.ExportToFile import ExportToFile
 from models.Stopwatch import Stopwatch
 
 """Ülesanne:
@@ -16,6 +17,7 @@ class Model:
     game_over = False #Mäng ei ole läbi
     cheater = False #Mängija ei ole petja
     stopwatch = Stopwatch() #Loome stopperi objekti
+
 
     def __init__(self):
         """Konstruktor"""
@@ -88,8 +90,12 @@ class Model:
                 self.lets_play() #Hakkad uuesti mängima
             elif user_input == 2:
                 #self.show_leaderboard() #Näita edetabelit
+                #self.show_no_cheater()
+                #self.show_menu()#Näita menüüd
+                etf = ExportToFile()
+                etf.export()
                 self.show_no_cheater()
-                self.show_menu() #Näita menüüd
+                self.show_menu()
             elif user_input == 3:
                 print('Bye, bye :)')
                 exit() #Igasugune skripti töö lõpp

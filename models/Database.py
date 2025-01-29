@@ -70,10 +70,26 @@ class Database:
             try:
                 sql = f'SELECT name, quess, steps, game_length FROM {self.table} where cheater=?;' #Turvakaalutlustel ?
                 self.cursor.execute(sql, (0,))
-                data = self.cursor.fetchall()  # Kõik kirjed muutujasse data
-                return data # Tagastab kõik kirjed, mis andmebaasiga seotud on
+                data = self.cursor.fetchall()# Kõik kirjed muutujasse data
+                data1 = sorted(data, key=lambda x: (x[2], x[3], x[0]))[:10] #Sorteerisin: sammude järgi, siis kui see sama siis aja järgi ja siis nime. Kuvab aint 10 esimets kirjet.
+                return data1 # Tagastab kõik kirjed, mis andmebaasiga seotud on
             except sqlite3.Error as error:
                 print(f'Kirjete lugemisel ilmnes tõrge: {error}')
                 return []  # Tagastab tühja listi
             finally:
                 self.close_connection()  # Igaljuhul sulge ühendus
+
+    def for_export(self):
+        #Uus meetod sorteeritud samamoodi nagu no_cheater
+        if self.cursor:
+            try:
+                sql = f'SELECT name, steps, quess, cheater, game_length, game_time FROM {self.table};'
+                self.cursor.execute(sql)
+                data = self.cursor.fetchall()
+                data1 = sorted(data, key=lambda x: (x[1], x[4], x[0])) #Sorteerib käikude arvu või aja või nime järgi
+                return data1
+            except sqlite3.Error as error:
+                print(f'Kirjete lugemisel ilmnes tõrge: {error}')
+                return []
+            finally:
+                self.close_connection()
