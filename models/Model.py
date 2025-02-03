@@ -92,8 +92,6 @@ class Model:
                 #self.show_leaderboard() #Näita edetabelit
                 #self.show_no_cheater()
                 #self.show_menu()#Näita menüüd
-                etf = ExportToFile()
-                etf.export()
                 self.show_no_cheater()
                 self.show_menu()
             elif user_input == 3:
@@ -122,6 +120,7 @@ class Model:
             print() #Tühirida enne tabelit
             #self.print_table(data, formatters)
             self.manual_table(data)
+            ExportToFile(self).export()
             print()
 
 

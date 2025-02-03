@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6feae4f9-71a5-4dec-976f-e8808d216b41" name="Changes" comment="Teeb tabeli mitte cheateritest.">
-      <change afterPath="$PROJECT_DIR$/models/ExportToFile.py" afterDir="false" />
+    <list default="true" id="6feae4f9-71a5-4dec-976f-e8808d216b41" name="Changes" comment="Kodutöö txt faili loomine iga kord kui vaadatakse menüüd.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_leaderboard_v2.db" beforeDir="false" afterPath="$PROJECT_DIR$/game_leaderboard_v2.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Database.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/Database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/Model.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1737013871939</updated>
       <workItem from="1737013873293" duration="26582000" />
-      <workItem from="1737983237610" duration="37445000" />
+      <workItem from="1737983237610" duration="40936000" />
     </task>
     <task id="LOCAL-00001" summary="Added folder models, files main, Model, Database (half) and Stopwatch.py (done)">
       <option name="closed" value="true" />
@@ -150,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737041878895</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Kodutöö txt faili loomine iga kord kui vaadatakse menüüd.">
+      <option name="closed" value="true" />
+      <created>1738167254846</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1738167254846</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,10 +166,11 @@
     <MESSAGE value="Added lets_play" />
     <MESSAGE value="Finished game code." />
     <MESSAGE value="Teeb tabeli mitte cheateritest." />
-    <option name="LAST_COMMIT_MESSAGE" value="Teeb tabeli mitte cheateritest." />
+    <MESSAGE value="Kodutöö txt faili loomine iga kord kui vaadatakse menüüd." />
+    <option name="LAST_COMMIT_MESSAGE" value="Kodutöö txt faili loomine iga kord kui vaadatakse menüüd." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/arva_ara_oop$main.coverage" NAME="main Coverage Results" MODIFIED="1738166817250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/arva_ara_oop$main.coverage" NAME="main Coverage Results" MODIFIED="1738594637805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/arva_ara_oop$ExportToFile.coverage" NAME="ExportToFile Coverage Results" MODIFIED="1737996651487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" />
   </component>
 </project>
